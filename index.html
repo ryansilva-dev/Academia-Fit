@@ -52,26 +52,41 @@
         }
 
         #hero {
-            background-image: url('imagensacademia.jpg/fundo.jpg.png');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-        }
+    background-image: url('imagensacademia.jpg/fundo.jpg.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    color: #fff;
+    padding: 0 5%;
+}
 
-        #hero h1 {
-            font-size: 50px;
-            animation: fadeIn 2s ease-out;
-        }
+#hero h1 {
+    font-size: 50px;
+    animation: fadeIn 2s ease-out;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+/* Responsividade pro mobile */
+@media (max-width: 768px) {
+    #hero {
+        min-height: 60vh;
+        padding: 0 20px;
+        background-position: top;
+    }
+
+    #hero h1 {
+        font-size: 30px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 
         section {
             padding: 60px 20px;
