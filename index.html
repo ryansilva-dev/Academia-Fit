@@ -51,38 +51,46 @@
             color: #e63946;
         }
 
+
         #hero {
-    background-image: url('imagensacademia.jpg/fundo.jpg.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
 }
 
-#hero h1 {
-    font-size: 50px;
-    animation: fadeIn 2s ease-out;
+/* Imagem Desktop */
+.img-desktop {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Imagem Mobile escondida por padrão */
+.img-mobile {
+  display: none;
 }
 
-/* Responsivo pro mobile */
+/* Quando for no celular: */
 @media (max-width: 768px) {
-    #hero {
-        height: 60vh; /* altura mais suave no mobile */
-    }
+  .img-desktop {
+    display: none;
+  }
 
-    #hero h1 {
-        font-size: 32px;
-        padding: 0 10px;
-    }
+  .img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+  }
 }
 
 
@@ -234,6 +242,12 @@
 
     <section id="hero">
         <h1>Bem-vindo à Academia EliteFit</h1>
+         <!-- Imagem Desktop -->
+  <img src="imagensacademia.jpg/fundo.jpg.png" class="img-desktop" alt="Imagem Desktop">
+
+  <!-- Imagem Mobile -->
+  <img src="imagensacademia.jpg/mobi.jpg.png" class="img-mobile" alt="Imagem Mobile">
+        
     </section>
 
     <section id="sobre">
